@@ -9,9 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.R;
 
 public class BaseActivity extends AppCompatActivity {
-    //Zulfiqar Ali Hunzai
-//admedonic tech
-//Android Developer
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);

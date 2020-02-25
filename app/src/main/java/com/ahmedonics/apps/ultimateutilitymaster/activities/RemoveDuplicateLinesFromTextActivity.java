@@ -14,9 +14,7 @@ import com.ahmedonics.apps.ultimateutilitymaster.utils.CommonFunctions;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-//Zulfiqar Ali Hunzai
-//admedonic tech
-//Android Developer
+
 public class RemoveDuplicateLinesFromTextActivity extends BaseActivity {
 
     @Override

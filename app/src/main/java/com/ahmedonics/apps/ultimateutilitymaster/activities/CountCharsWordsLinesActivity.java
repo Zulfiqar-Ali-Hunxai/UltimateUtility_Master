@@ -14,9 +14,7 @@ import android.widget.Toast;
 
 import com.ahmedonics.apps.ultimateutilitymaster.R;
 import com.ahmedonics.apps.ultimateutilitymaster.utils.CommonFunctions;
-//Zulfiqar Ali Hunzai
-//admedonic tech
-//Android Developer
+
 public class CountCharsWordsLinesActivity extends BaseActivity {
 
     @Override
