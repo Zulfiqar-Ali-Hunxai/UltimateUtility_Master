@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Ultimate Utility Master</string>
+    <string name="homepage_above_text">Dashboard</string>
+    <string name="button_text_generate_random_number">Random Number Generator</string>
+    <string name="button_text_delete_duplicate_lines_from_text">Delete Duplicate Lines From Text</string>
+    <string name="setting_above_text">Configuration Settings</string>
+    <string name="about_above_text">About Ultimate Utility Master</string>
+    <string name="random_number_generator_above_text">Random Number Generator</string>
+    <string name="app_version">Version: 1.0.0</string>
+    <string name="button_text_repeater">Text Repeater</string>
+    <string name="button_convert_text_to_upper_case">Convert text to upper case</string>
+    <string name="button_convert_text_to_lower_case">Convert text to lower case</string>
+    <string name="text_count_char_words_lines">Count characters, words and lines</string>
+    <string name="text_what_is_my_ip_address">What is my IP Address</string>
+    <string name="text_system_information">Systen Information</string>
+    <string name="title_activity_setting">Settings</string>
+
+    <!-- About page -->
+    <string name="about_us_text">Thank you for downloading Ultimate Utility Master app from Google Play Store. This app includes some handy utility tools for nerds or common individuals. I update this app regularly to add new features and to fix out reported bugs. \n\nYou may change some settings in the settings page in this app to further enhance your experience. Please note that we do not record or share any of your data posted to this application in any way. So feel assured that your data is never compromised. \n\nPlease enjoy the app and do share your feedback, suggestions and questions about the app. I will be happy to learn from your idaeas and improve the app over time. \n\n</string>
+    <string name="about_privacy"></string>
+    <string name="about_terms"></string>
+
+    <string-array name="en_dc_type">
+        <item>Encode</item>
+        <item>Decode</item>
+    </string-array>
+
+    <string-array name="en_dc_features">
+        <item>Web URL</item>
+        <item>Base64</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.SortLinesInTextActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyles"
+                android:text="Please input text to encode or decode:" />
+
+            <EditText
+                android:id="@+id/text"
+                style="@style/editViewStyles"
+                android:ems="10"
+                android:height="200dp"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="A word, sentence or pargraph"
+                />
+
+            <Spinner
+                android:id="@+id/en_feature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/editViewStyles"
+                android:entries="@array/en_dc_features"/>
+
+            <Spinner
+                android:id="@+id/en_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/editViewStyles"
+                android:entries="@array/en_dc_type"/>
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/submitButtons"
+                android:text="Generate Result" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

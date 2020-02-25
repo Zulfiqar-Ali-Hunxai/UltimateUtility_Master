@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyles"
+                android:text="Please input start value:" />
+
+            <EditText
+                android:id="@+id/generate_random_number__start_val"
+                style="@style/editViewStyles"
+                android:ems="10"
+                android:hint="0 to 999999"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/textStyles"
+                android:text="Please input End value:" />
+
+            <EditText
+                android:id="@+id/generate_random_number__end_val"
+                style="@style/editViewStyles"
+                android:hint="0 to 999999"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                style="@style/textStyles"
+                android:text="How many numbers to be generated: " />
+
+            <EditText
+                android:id="@+id/generate_random_number__how_many"
+                style="@style/editViewStyles"
+                android:hint="1 to 100"
+                android:ems="10"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btn_generate_random_number_submit"
+                style="@style/submitButtons"
+                android:text="Generate Random Numbers" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

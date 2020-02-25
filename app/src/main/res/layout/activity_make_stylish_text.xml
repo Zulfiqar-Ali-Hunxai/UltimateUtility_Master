@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MakeStylishTextActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyles"
+                android:text="Please input text to style:" />
+
+            <EditText
+                android:id="@+id/text"
+                style="@style/editViewStyles"
+                android:ems="10"
+                android:height="200dp"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="A word, sentence or pargraph"
+                />
+
+            <Button
+                android:id="@+id/convert_text_to_upper__submit"
+                style="@style/submitButtons"
+                android:text="Generate Result" />
+
+            <TextView
+                android:id="@+id/utility_result"
+                style="@style/textContentStyles"
+                android:visibility="invisible"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

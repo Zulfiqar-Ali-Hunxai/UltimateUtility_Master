@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyles"
+                android:text="Please input text to speak:" />
+
+            <EditText
+                android:id="@+id/et"
+                style="@style/editViewStyles"
+                android:ems="10"
+                android:height="200dp"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="A word, sentence or pargraph"
+                />
+
+            <Button
+                android:id="@+id/btn"
+                style="@style/submitButtons"
+                android:text="Convert Text to Speech" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

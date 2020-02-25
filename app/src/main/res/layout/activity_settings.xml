@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:textAlignment="center"
+                style="@style/textStyles"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Note: To view new changes made here- please restart application after the update(s)."/>
+
+            <EditText
+                android:id="@+id/user_name"
+                style="@style/editViewStyles"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Enter your first name" />
+
+            <Switch
+                android:id="@+id/settings_keep_screen_on"
+                style="@style/textStyles"
+                android:text="Keep screen always on: " />
+
+            <Button
+                android:id="@+id/btn_settings_submit"
+                style="@style/submitButtons"
+                android:text="Update Settings" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewPlay"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_play_foreground" />
+
+    <TextView
+        android:id="@+id/textViewRecordingname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="Record Record RecordRec ordRecord RecordRecordddddd dRecordRecordRecord"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/imageViewPlay"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageViewPlay"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/imageViewPlay"
+        />
+
+</RelativeLayout>
