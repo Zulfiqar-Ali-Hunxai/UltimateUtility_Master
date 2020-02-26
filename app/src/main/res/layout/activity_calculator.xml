@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.calculator.CalculatorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/FullCal"
+            android:id="@+id/textView"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp" />
+
+
+        <Button
+            android:text="@string/stdCal"
+            android:id="@+id/button1"
+            style="@style/submitButtons"
+            android:layout_margin="15dp"
+            android:onClick="onClick"/>
+
+        <Button
+
+            android:text="@string/sciCal"
+            android:id="@+id/button"
+            style="@style/submitButtons"
+            android:layout_margin="15dp"
+            android:onClick="onClick"/>
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

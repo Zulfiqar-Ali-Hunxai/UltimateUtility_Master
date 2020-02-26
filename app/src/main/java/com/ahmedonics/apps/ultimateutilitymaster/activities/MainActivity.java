@@ -25,15 +25,14 @@ import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 
 import com.ahmedonics.apps.ultimateutilitymaster.R;
+import com.ahmedonics.apps.ultimateutilitymaster.activities.calculator.CalculatorActivity;
+import com.ahmedonics.apps.ultimateutilitymaster.activities.fleshLight.FleshLightActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.utils.CommonFunctions;
 
 import java.util.ArrayList;
 
 //Zulfiqar Ali Hunzai
-//admedonic tech
-//htttt
-//Android Developer
-//Android Developer
+//Android Developer at admedonic tech
 
 public class MainActivity extends BaseActivity {
     private LinearLayout llContainer;
@@ -139,6 +138,15 @@ public class MainActivity extends BaseActivity {
 
         mProductArrayList.add(new MainPageButtons("System Information",
                 SystemInformationActivity.class, R.drawable.ic_button_systerm_info_foreground));
+
+        mProductArrayList.add(new MainPageButtons(" Flesh Light",
+                FleshLightActivity.class, R.drawable.ic_highlight_black_24dp));
+
+        mProductArrayList.add(new MainPageButtons(" Magnifier Glass",
+                FleshLightActivity.class, R.drawable.ic_search_black_24dp));
+
+        mProductArrayList.add(new MainPageButtons(" Calculator",
+                CalculatorActivity.class, R.drawable.xaxa));
 
         adapter1 = new MyAdapter(MainActivity.this, mProductArrayList);
         lvProducts.setAdapter(adapter1);
