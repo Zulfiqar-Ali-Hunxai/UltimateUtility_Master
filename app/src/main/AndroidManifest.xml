@@ -26,39 +26,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.calculator.StandardCal"></activity>
-        <activity android:name=".activities.calculator.CalculatorActivity" />
+        <activity android:name=".activities.Unit_Converter.UnitTemperatureActivity"></activity>
+        <activity android:name=".activities.Unit_Converter.UnitWeightActivity" />
+        <activity android:name=".activities.Unit_Converter.UnitLengthActivity" />
+        <activity android:name=".activities.Unit_Converter.UnitAreaActivity" />
+        <activity android:name=".activities.Unit_Converter.UnitConverterActivity" />
         <activity
-            android:name=".activities.fleshLight.FleshLightActivity"
-            android:parentActivityName=".activities.MainActivity" />
-        <activity android:name=".activities.TextEncodersAndDecodersActivity" />
-        <activity android:name=".activities.SortLinesInTextActivity" />
-        <activity android:name=".activities.RemoveEmptyLinesFromTextActivity" />
-        <activity android:name=".activities.RemoveDuplicateLinesFromTextActivity" />
-        <activity android:name=".activities.FindAndReplaceTextActivity" />
-        <activity android:name=".activities.RemoveEmojiFromTextActivity" />
-        <activity android:name=".activities.MakeStylishTextActivity" />
-        <activity android:name=".activities.ToggleTextCaseActivity" />
-        <activity android:name=".activities.MyAvailableSensorsActivity" />
-        <activity android:name=".activities.CompassActivity" />
-        <activity android:name=".activities.TextToSpeechActivity" />
-        <activity android:name=".activities.StopWatchActivity" />
-        <activity android:name=".activities.CalendarActivity" />
-        <activity android:name=".activities.VoiceRecorderListActivity" />
-        <activity android:name=".activities.VoiceRecorderActivity" />
-        <activity android:name=".activities.SystemInformationActivity" />
-        <activity android:name=".activities.WhatIsMyIpAddressActivity" />
-        <activity android:name=".activities.CountCharsWordsLinesActivity" />
-        <activity android:name=".activities.ConvertTextToUpperActivity" />
-        <activity android:name=".activities.ConvertTextToLowerActivity" />
-        <activity android:name=".activities.TextRepeaterActivity" />
-        <activity android:name=".activities.BaseActivity" />
-        <activity android:name=".activities.RandomNumberGeneratorActivity" />
-        <activity android:name=".activities.AboutActivity" />
-        <activity android:name=".activities.SettingsActivity" />
-        <activity android:name=".activities.MainActivity" />
+            android:name=".activities.Ruler.RulerActivity"
+            android:parentActivityName=".activities.Others.MainActivity" />
         <activity
-            android:name=".activities.SplashActivity"
+            android:name=".activities.Password_Generator.PasswordGeneratorActivity"
+            android:parentActivityName=".activities.Others.MainActivity" />
+        <activity
+            android:name=".activities.Calculator.ScientificCalculator.ScientificCalculator"
+            android:parentActivityName=".activities.Calculator.StandardCalculator.CalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Calculator.StandardCalculator.History"
+            android:parentActivityName=".activities.Calculator.StandardCalculator.StandardCal" />
+        <activity
+            android:name=".activities.Calculator.StandardCalculator.StandardCal"
+            android:parentActivityName=".activities.Calculator.StandardCalculator.CalculatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Calculator.StandardCalculator.CalculatorActivity"
+            android:parentActivityName=".activities.Others.MainActivity" />
+        <activity
+            android:name=".activities.Flesh_Light.FleshLightActivity"
+            android:parentActivityName=".activities.Others.MainActivity" />
+        <activity android:name=".activities.Others.TextEncodersAndDecodersActivity" />
+        <activity android:name=".activities.Others.SortLinesInTextActivity" />
+        <activity android:name=".activities.Others.RemoveEmptyLinesFromTextActivity" />
+        <activity android:name=".activities.Others.RemoveDuplicateLinesFromTextActivity" />
+        <activity android:name=".activities.Others.FindAndReplaceTextActivity" />
+        <activity android:name=".activities.Others.RemoveEmojiFromTextActivity" />
+        <activity android:name=".activities.Others.MakeStylishTextActivity" />
+        <activity android:name=".activities.Others.ToggleTextCaseActivity" />
+        <activity android:name=".activities.Others.MyAvailableSensorsActivity" />
+        <activity android:name=".activities.Others.CompassActivity" />
+        <activity android:name=".activities.Others.TextToSpeechActivity" />
+        <activity android:name=".activities.Others.StopWatchActivity" />
+        <activity android:name=".activities.Others.CalendarActivity" />
+        <activity android:name=".activities.Others.VoiceRecorderListActivity" />
+        <activity android:name=".activities.Others.VoiceRecorderActivity" />
+        <activity android:name=".activities.Others.SystemInformationActivity" />
+        <activity android:name=".activities.Others.WhatIsMyIpAddressActivity" />
+        <activity android:name=".activities.Others.CountCharsWordsLinesActivity" />
+        <activity android:name=".activities.Others.ConvertTextToUpperActivity" />
+        <activity android:name=".activities.Others.ConvertTextToLowerActivity" />
+        <activity android:name=".activities.Others.TextRepeaterActivity" />
+        <activity android:name=".activities.Others.BaseActivity" />
+        <activity android:name=".activities.Others.RandomNumberGeneratorActivity" />
+        <activity android:name=".activities.Others.AboutActivity" />
+        <activity android:name=".activities.Others.SettingsActivity" />
+        <activity android:name=".activities.Others.MainActivity" />
+        <activity
+            android:name=".activities.Others.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/fullscreenTheme">
             <intent-filter>

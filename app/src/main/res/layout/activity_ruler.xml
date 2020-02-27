@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Ruler.RulerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+       >
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            style="@style/editViewStyles"/>
+
+        <com.kevalpatel2106.rulerpicker.RulerValuePicker
+            android:id="@+id/ruler_picker"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_red_dark"
+            app:indicator_color="@android:color/white"
+            app:indicator_interval="14dp"
+            app:indicator_width="2dp"
+            android:layout_below="@id/tv"
+            android:layout_marginTop="50dp"
+            app:max_value="500"
+            app:min_value="1"
+            app:notch_color="@android:color/white"
+            app:ruler_text_size="6sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
