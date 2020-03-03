@@ -1,4 +1,4 @@
-package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator;
+package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.ScientificCalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 

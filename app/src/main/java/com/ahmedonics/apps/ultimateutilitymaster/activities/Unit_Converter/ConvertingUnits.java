@@ -61,10 +61,7 @@ public class ConvertingUnits {
             return (milli/1000);
         }
 
-        public double MeterToMilli(double meter)
-        {
-            return (meter*1000);
-        }
+        public double MeterToMilli(double value) { return (value*1000); }
 
         public double CentiToMeter(double Centi)
         {
@@ -76,15 +73,9 @@ public class ConvertingUnits {
             return (meter*100);
         }
 
-        public double KiloToMeter(double Kilo)
-        {
-            return (Kilo*1000);
-        }
+        public double KiloToMeter(double Kilo) { return (Kilo*1000); }
 
-        public double MeterToKilo(double meter)
-        {
-            return (meter/1000);
-        }
+        public double MeterToKilo(double meter) { return (meter/1000); }
 
         public double InchToMeter(double Inch)
         {

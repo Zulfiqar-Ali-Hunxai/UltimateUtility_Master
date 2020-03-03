@@ -1,4 +1,4 @@
-package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator;
+package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.ScientificCalculator;
 
 import android.content.ContentValues;
 import android.content.Context;

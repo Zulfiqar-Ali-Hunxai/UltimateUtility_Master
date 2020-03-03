@@ -29,7 +29,8 @@
         <activity android:name=".activities.Unit_Converter.UnitTemperatureActivity"></activity>
         <activity android:name=".activities.Unit_Converter.UnitWeightActivity" />
         <activity android:name=".activities.Unit_Converter.UnitLengthActivity" />
-        <activity android:name=".activities.Unit_Converter.UnitAreaActivity" />
+        <activity android:name=".activities.Unit_Converter.UnitAreaActivity"
+            android:parentActivityName=".activities.Others.MainActivity"/>
         <activity android:name=".activities.Unit_Converter.UnitConverterActivity" />
         <activity
             android:name=".activities.Ruler.RulerActivity"
@@ -39,18 +40,11 @@
             android:parentActivityName=".activities.Others.MainActivity" />
         <activity
             android:name=".activities.Calculator.ScientificCalculator.ScientificCalculator"
-            android:parentActivityName=".activities.Calculator.StandardCalculator.CalculatorActivity"
+            android:parentActivityName=".activities.Others.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.Calculator.StandardCalculator.History"
-            android:parentActivityName=".activities.Calculator.StandardCalculator.StandardCal" />
-        <activity
-            android:name=".activities.Calculator.StandardCalculator.StandardCal"
-            android:parentActivityName=".activities.Calculator.StandardCalculator.CalculatorActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.Calculator.StandardCalculator.CalculatorActivity"
-            android:parentActivityName=".activities.Others.MainActivity" />
+            android:name=".activities.Calculator.ScientificCalculator.History"
+            android:parentActivityName=".activities.Calculator.ScientificCalculator.ScientificCalculator"/>
         <activity
             android:name=".activities.Flesh_Light.FleshLightActivity"
             android:parentActivityName=".activities.Others.MainActivity" />

@@ -21,6 +21,11 @@ public class UnitAreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit_area);
 
+        setTitle("Unit Area");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+
         e1=(EditText)findViewById(R.id.item1);
         e2=(EditText)findViewById(R.id.item2);
         s1=(Spinner)findViewById(R.id.spinner1);

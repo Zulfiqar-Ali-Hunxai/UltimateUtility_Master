@@ -1,4 +1,4 @@
-package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator;
+package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.ScientificCalculator;
 
 import com.fathzer.soft.javaluator.DoubleEvaluator;
 import com.fathzer.soft.javaluator.Function;
@@ -6,7 +6,7 @@ import com.fathzer.soft.javaluator.Parameters;
 
 import java.util.Iterator;
 
-public class ExtendedDoubleEvaluator  extends DoubleEvaluator {
+public class ExtendedDoubleEvaluator extends DoubleEvaluator {
     /** Defines the new function (square root).*/
     private static final Function SQRT = new Function("sqrt", 1);
     private static final Function CBRT = new Function("cbrt", 1);
@@ -53,7 +53,6 @@ public class ExtendedDoubleEvaluator  extends DoubleEvaluator {
             return Math.toDegrees(Math.atan(arguments.next()));
         }
         else {
-            // If it's another function, pass it to DoubleEvaluator
             return super.evaluate(function, arguments, evaluationContext);
         }
     }

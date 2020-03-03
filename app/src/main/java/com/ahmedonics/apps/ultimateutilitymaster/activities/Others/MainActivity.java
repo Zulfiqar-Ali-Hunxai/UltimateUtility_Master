@@ -25,9 +25,9 @@ import androidx.core.content.pm.ShortcutManagerCompat;
 import androidx.core.graphics.drawable.IconCompat;
 
 import com.ahmedonics.apps.ultimateutilitymaster.R;
+import com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.ScientificCalculator.ScientificCalculator;
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Password_Generator.PasswordGeneratorActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Ruler.RulerActivity;
-import com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator.CalculatorActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Flesh_Light.FleshLightActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Unit_Converter.UnitConverterActivity;
 
@@ -141,20 +141,20 @@ public class MainActivity extends BaseActivity {
         mProductArrayList.add(new MainPageButtons("System Information",
                 SystemInformationActivity.class, R.drawable.ic_button_systerm_info_foreground));
 
-        mProductArrayList.add(new MainPageButtons(" Flesh Light",
+        mProductArrayList.add(new MainPageButtons("Flesh Light",
                 FleshLightActivity.class, R.drawable.ic_highlight_black_24dp));
 
-        mProductArrayList.add(new MainPageButtons(" Calculator",
-                CalculatorActivity.class, R.drawable.xaxa));
+        mProductArrayList.add(new MainPageButtons("Calculator",
+                ScientificCalculator.class, R.drawable.xaxa));
 
-        mProductArrayList.add(new MainPageButtons(" Auto Password Generator",
+        mProductArrayList.add(new MainPageButtons("Password Generator",
                 PasswordGeneratorActivity.class, R.drawable.ic_lock_open_black_24dp));
 
-        mProductArrayList.add(new MainPageButtons(" Ruler",
-                RulerActivity.class, R.drawable.ic_search_black_24dp));
+        mProductArrayList.add(new MainPageButtons("Ruler",
+                RulerActivity.class, R.drawable.rul));
 
-        mProductArrayList.add(new MainPageButtons(" Unit Converter",
-                UnitConverterActivity.class, R.drawable.ic_search_black_24dp));
+        mProductArrayList.add(new MainPageButtons("Unit Converter",
+                UnitConverterActivity.class, R.drawable.conv));
 
         adapter1 = new MyAdapter(MainActivity.this, mProductArrayList);
         lvProducts.setAdapter(adapter1);

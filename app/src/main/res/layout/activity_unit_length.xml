@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activities.Unit_Converter.UnitLengthActivity">
 
+    <include layout="@layout/content_unit_length" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

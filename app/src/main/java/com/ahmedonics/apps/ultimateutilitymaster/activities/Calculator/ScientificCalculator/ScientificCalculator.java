@@ -2,24 +2,21 @@ package com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.Scientif
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import com.ahmedonics.apps.ultimateutilitymaster.R;
-import com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator.DBHelper;
-import com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator.ExtendedDoubleEvaluator;
-import com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.StandardCalculator.History;
 
 public class ScientificCalculator extends AppCompatActivity {
 
-    private EditText e1,e2;
-    private int count=0;
+    private TextView e1,e2;
+    private int count = 0;
     private String expression="";
     private String text="";
-    private Double result=0.0;
+    private Double result;
+    private Integer result2;
     private DBHelper dbHelper;
     private Button mode,toggle,square,xpowy,log,sin,cos,tan,sqrt,fact;
     private int toggleMode=1;
@@ -34,18 +31,18 @@ public class ScientificCalculator extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        e1 = (EditText) findViewById(R.id.editText);
-        e2 = (EditText) findViewById(R.id.editText2);
-        mode = (Button) findViewById(R.id.mode);
-        toggle = (Button) findViewById(R.id.toggle);
-        square = (Button) findViewById(R.id.square);
-        xpowy = (Button) findViewById(R.id.xpowy);
-        log = (Button) findViewById(R.id.log);
-        sin = (Button) findViewById(R.id.sin);
-        cos = (Button) findViewById(R.id.cos);
-        tan = (Button) findViewById(R.id.tan);
-        sqrt= (Button) findViewById(R.id.sqrt);
-        fact = (Button) findViewById(R.id.factorial);
+        e1 = findViewById(R.id.editText);
+        e2 = findViewById(R.id.editText2);
+        mode =  findViewById(R.id.mode);
+        toggle =  findViewById(R.id.toggle);
+        square =  findViewById(R.id.square);
+        xpowy =  findViewById(R.id.xpowy);
+        log =  findViewById(R.id.log);
+        sin =  findViewById(R.id.sin);
+        cos =  findViewById(R.id.cos);
+        tan =  findViewById(R.id.tan);
+        sqrt=  findViewById(R.id.sqrt);
+        fact =  findViewById(R.id.factorial);
 
         dbHelper=new DBHelper(this);
 
@@ -414,7 +411,7 @@ public class ScientificCalculator extends AppCompatActivity {
                     String s = e2.getText().toString();
                     char arr[] = s.toCharArray();
                     if (arr[0] == '-')
-                        e2.setText(s.substring(1, s.length()));
+                        e2.setText(s.substring(1));
                     else
                         e2.setText("-" + s);
                 }
@@ -428,19 +425,33 @@ public class ScientificCalculator extends AppCompatActivity {
                 }
                 e1.setText("");
                 if (expression.length() == 0)
-                    expression = "0.0";
+                    expression = "0";
                 try {
                     result = new ExtendedDoubleEvaluator().evaluate(expression);
-                    if (String.valueOf(result).equals("6.123233995736766E-17"))
+
+                    System.out.println(" RESULT "+result);
+
+                    String rslt[] = String.valueOf(result).split("\\.");
+                    long rs = Long.parseLong(rslt[rslt.length-1]);
+
+//                    System.out.println(" RESULT "+Integer.parseInt(rslt[rslt.length-1]));
+
+                    if (rs > 0){
+                        e2.setText(result + "");
+                    }else {
+                        e2.setText(rslt[rslt.length-2] + "");
+                    }
+
+                    if (String.valueOf(result).equals(""))
                     {
                         result=0.0;
                         e2.setText(result + "");
                     }
-                    else if(String.valueOf(result).equals("1.633123935319537E16"))
+                    else if(String.valueOf(result).equals(""))
                         e2.setText("infinity");
                     else
                         e2.setText(result + "");
-                    if (!expression.equals("0.0"))
+                    if (!expression.equals(""))
                         dbHelper.insert("SCIENTIFIC", expression + " = " + result);
                 } catch (Exception e) {
                     e2.setText("Invalid Expression");
@@ -459,12 +470,6 @@ public class ScientificCalculator extends AppCompatActivity {
                     e1.setText(e1.getText() +e2.getText().toString()+ ")");
                 else
                     e1.setText(e1.getText() + ")");
-                break;
-
-            case R.id.history:
-                Intent i = new Intent(this, History.class);
-                i.putExtra("calcName", "SCIENTIFIC");
-                startActivity(i);
                 break;
         }
     }

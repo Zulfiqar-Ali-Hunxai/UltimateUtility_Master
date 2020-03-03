@@ -7,19 +7,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.Ruler.RulerActivity">
-
-    <RelativeLayout
+    <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        style="@style/editViewStyles"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_margin="15dp"
        >
 
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            style="@style/editViewStyles"/>
+
 
         <com.kevalpatel2106.rulerpicker.RulerValuePicker
             android:id="@+id/ruler_picker"
@@ -29,7 +31,6 @@
             app:indicator_color="@android:color/white"
             app:indicator_interval="14dp"
             app:indicator_width="2dp"
-            android:layout_below="@id/tv"
             android:layout_marginTop="50dp"
             app:max_value="500"
             app:min_value="1"
@@ -37,7 +38,7 @@
             app:ruler_text_size="6sp" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>
