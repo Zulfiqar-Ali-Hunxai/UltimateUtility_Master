@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="min_password_length">8</string>
+    <string name="max_password_length">30</string>
+</resources>

@@ -434,25 +434,27 @@ public class ScientificCalculator extends AppCompatActivity {
                     String rslt[] = String.valueOf(result).split("\\.");
                     long rs = Long.parseLong(rslt[rslt.length-1]);
 
-//                    System.out.println(" RESULT "+Integer.parseInt(rslt[rslt.length-1]));
+                    System.out.println(" RESULT "+Integer.parseInt(rslt[rslt.length-1]));
 
                     if (rs > 0){
                         e2.setText(result + "");
                     }else {
                         e2.setText(rslt[rslt.length-2] + "");
+
                     }
 
-                    if (String.valueOf(result).equals(""))
-                    {
-                        result=0.0;
-                        e2.setText(result + "");
-                    }
-                    else if(String.valueOf(result).equals(""))
-                        e2.setText("infinity");
-                    else
-                        e2.setText(result + "");
-                    if (!expression.equals(""))
-                        dbHelper.insert("SCIENTIFIC", expression + " = " + result);
+//                    if (String.valueOf(result).equals(""))
+//                    {
+//                        result=0.0;
+//                        e2.setText(result + "");
+//                        System.out.println("e222"+result);
+//                    }
+//                    else if(String.valueOf(result).equals(""))
+//                        e2.setText("infinity");
+//                    else
+//                        e2.setText(result + "");
+//                    if (!expression.equals(""))
+//                        dbHelper.insert("SCIENTIFIC", expression + " = " + result);
                 } catch (Exception e) {
                     e2.setText("Invalid Expression");
                     e1.setText("");

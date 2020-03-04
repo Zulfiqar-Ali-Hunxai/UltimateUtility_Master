@@ -5,7 +5,7 @@ public class ConvertingUnits {
     static class Area{
         public double sqMilliToMeter(double milli)
         {
-            return (milli/1000000);
+            return (milli/1000);
         }
 
         public double sqMeterToMilli(double meter)
