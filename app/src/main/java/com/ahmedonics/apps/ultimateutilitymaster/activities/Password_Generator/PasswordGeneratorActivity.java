@@ -2,6 +2,7 @@ package com.ahmedonics.apps.ultimateutilitymaster.activities.Password_Generator;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
@@ -21,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,7 +36,7 @@ public class PasswordGeneratorActivity extends AppCompatActivity {
     private String GENERATED_PASSWORD_TAG = "GENERATED_PASSWORD";
 
     @BindView(R.id.password_result)
-    AppCompatTextView passwordResult;
+    EditText passwordResult;
 
     @BindView(R.id.password_length_hint)
     AppCompatTextView lengthTitle;
@@ -79,29 +81,28 @@ public class PasswordGeneratorActivity extends AppCompatActivity {
         passwordResult.setText(getPasswordGenerator().generate(passwordLengthSeekBar.getProgress()));
     }
 
-    @OnClick(R.id.generated_password_container)
-    void copyPassword() {
-        String password = passwordResult.getText().toString();
-        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clip = ClipData.newPlainText(password, password);
+//    @OnClick(R.id.generated_password_container)
+//    void copyPassword() {
+//        String password = passwordResult.getText().toString();
+//        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+//        ClipData clip = ClipData.newPlainText(password, password);
+//
+//        if (clipboard != null) {
+//            clipboard.setPrimaryClip(clip);
+//            Toast.makeText(this, getResources().getString(R.string.password_copied), Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
-        if (clipboard != null) {
-            clipboard.setPrimaryClip(clip);
-            Toast.makeText(this, getResources().getString(R.string.password_copied), Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @OnLongClick(R.id.generated_password_container)
-    boolean sharePassword() {
-        ShareCompat.IntentBuilder
-                .from(this)
-                .setType("text/plain")
-                .setText(passwordResult.getText().toString())
-                .startChooser();
-
-        return true;
-    }
-
+//    @OnLongClick(R.id.generated_password_container)
+//    boolean sharePassword() {
+//        ShareCompat.IntentBuilder
+//                .from(this)
+//                .setType("text/plain")
+//                .setText(passwordResult.getText().toString())
+//                .startChooser();
+//
+//        return true;
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,16 +159,8 @@ public class PasswordGeneratorActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.action_info:
-//                new AboutDialog.Builder(this)
-//                        .setAuthor("@MarcosCGdev")
-//                        .setWebsite("www.marcoscg.com")
-//                        .show();
-//                return true;
-//            default:
+
                 return super.onOptionsItemSelected(item);
-//        }
     }
 
     private PasswordGenerator getPasswordGenerator() {

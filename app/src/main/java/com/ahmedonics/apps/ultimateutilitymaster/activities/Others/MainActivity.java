@@ -29,7 +29,7 @@ import com.ahmedonics.apps.ultimateutilitymaster.activities.Calculator.Scientifi
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Password_Generator.PasswordGeneratorActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Ruler.RulerActivity;
 import com.ahmedonics.apps.ultimateutilitymaster.activities.Flesh_Light.FleshLightActivity;
-import com.ahmedonics.apps.ultimateutilitymaster.activities.Unit_Converter.UnitConverterActivity;
+import com.ahmedonics.apps.ultimateutilitymaster.activities.Unit_Converter.UnitAreaActivity;
 
 import java.util.ArrayList;
 
@@ -150,11 +150,11 @@ public class MainActivity extends BaseActivity {
         mProductArrayList.add(new MainPageButtons("Password Generator",
                 PasswordGeneratorActivity.class, R.drawable.ic_lock_open_black_24dp));
 
-        mProductArrayList.add(new MainPageButtons("Ruler",
-                RulerActivity.class, R.drawable.rul));
+//        mProductArrayList.add(new MainPageButtons("Ruler",
+//                RulerActivity.class, R.drawable.rul));
 
         mProductArrayList.add(new MainPageButtons("Unit Converter",
-                UnitConverterActivity.class, R.drawable.conv));
+                UnitAreaActivity.class, R.drawable.conv));
 
         adapter1 = new MyAdapter(MainActivity.this, mProductArrayList);
         lvProducts.setAdapter(adapter1);

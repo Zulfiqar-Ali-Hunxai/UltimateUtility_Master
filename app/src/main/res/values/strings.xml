@@ -74,6 +74,15 @@
         <item>Hectare</item>
     </string-array>
 
+    <string-array name="units">
+        <item>Temperature</item>
+        <item>Length</item>
+        <item>Area</item>
+        <item>Weight</item>
+
+
+    </string-array>
+
     <string-array name="length">
         <item>Nanometer</item>
         <item>Millimeter</item>

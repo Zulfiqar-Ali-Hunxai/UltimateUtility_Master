@@ -25,7 +25,7 @@ public class ConvertingUnits {
 
         public double sqKiloToMeter(double Kilo)
         {
-            return (Kilo*1000000);
+            return (Kilo*1000);
         }
 
         public double sqMeterToKilo(double meter)
@@ -52,16 +52,19 @@ public class ConvertingUnits {
         {
             return (meter/10000);
         }
+
     }
 
-    //class to convert units of length
     static class Length{
         public double MilliToMeter(double milli)
         {
             return (milli/1000);
         }
 
-        public double MeterToMilli(double value) { return (value*1000); }
+        public double MeterToMilli(double meter)
+        {
+            return (meter*1000);
+        }
 
         public double CentiToMeter(double Centi)
         {
@@ -73,9 +76,15 @@ public class ConvertingUnits {
             return (meter*100);
         }
 
-        public double KiloToMeter(double Kilo) { return (Kilo*1000); }
+        public double KiloToMeter(double Kilo)
+        {
+            return (Kilo*1000);
+        }
 
-        public double MeterToKilo(double meter) { return (meter/1000); }
+        public double MeterToKilo(double meter)
+        {
+            return (meter/1000);
+        }
 
         public double InchToMeter(double Inch)
         {

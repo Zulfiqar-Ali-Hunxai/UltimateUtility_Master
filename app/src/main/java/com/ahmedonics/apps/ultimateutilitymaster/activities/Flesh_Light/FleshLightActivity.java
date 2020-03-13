@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.ahmedonics.apps.ultimateutilitymaster.R;
 
@@ -32,13 +33,13 @@ public class FleshLightActivity extends AppCompatActivity {
 
     }
     public void toggle(View view) {
-        Button button = (Button) view;
-        if (button.getText().equals("On")) {
-            button.setText(R.string.off);
+        ImageButton button = (ImageButton) view;
+        if (!isTorchOn) {
             torchToggle("on");
+            button.setImageResource(R.drawable.btn_on);
         } else {
-            button.setText(R.string.on);
             torchToggle("off");
+            button.setImageResource(R.drawable.btn_off);
         }
     }
     private void torchToggle(String command) {
@@ -52,6 +53,7 @@ public class FleshLightActivity extends AppCompatActivity {
                 if (camManager != null) {
                     if (command.equals("on")) {
                         camManager.setTorchMode(cameraId, true);
+
                         isTorchOn = true;
                     } else {
                         camManager.setTorchMode(cameraId, false);

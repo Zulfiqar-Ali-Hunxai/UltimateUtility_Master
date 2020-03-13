@@ -26,28 +26,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Unit_Converter.UnitTemperatureActivity"></activity>
-        <activity android:name=".activities.Unit_Converter.UnitWeightActivity" />
-        <activity android:name=".activities.Unit_Converter.UnitLengthActivity" />
+
         <activity android:name=".activities.Unit_Converter.UnitAreaActivity"
-            android:parentActivityName=".activities.Others.MainActivity"/>
-        <activity android:name=".activities.Unit_Converter.UnitConverterActivity" />
+            android:parentActivityName=".activities.Others.MainActivity"
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".activities.Ruler.RulerActivity"
             android:parentActivityName=".activities.Others.MainActivity" />
+
         <activity
             android:name=".activities.Password_Generator.PasswordGeneratorActivity"
-            android:parentActivityName=".activities.Others.MainActivity" />
+            android:parentActivityName=".activities.Others.MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.Calculator.ScientificCalculator.ScientificCalculator"
             android:parentActivityName=".activities.Others.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.Calculator.ScientificCalculator.History"
-            android:parentActivityName=".activities.Calculator.ScientificCalculator.ScientificCalculator"/>
+            android:parentActivityName=".activities.Calculator.ScientificCalculator.ScientificCalculator"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.Flesh_Light.FleshLightActivity"
-            android:parentActivityName=".activities.Others.MainActivity" />
+            android:parentActivityName=".activities.Others.MainActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".activities.Others.TextEncodersAndDecodersActivity" />
         <activity android:name=".activities.Others.SortLinesInTextActivity" />
         <activity android:name=".activities.Others.RemoveEmptyLinesFromTextActivity" />
